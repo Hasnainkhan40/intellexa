@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intellexa/chat_screen.dart';
 import 'package:intellexa/const/string.dart';
 import 'package:intellexa/my_home_page.dart';
 
@@ -8,10 +9,9 @@ class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: SingleChildScrollView(
-          physics: ClampingScrollPhysics(),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,14 +37,13 @@ class Onboarding extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 32),
               Image.asset('assets/onboarding.png'),
               SizedBox(height: 32),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => const MyHomePage()),
+                    MaterialPageRoute(builder: (context) => const ChatScreen()),
                     (route) => false,
                   );
                 },
@@ -64,6 +63,7 @@ class Onboarding extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 50),
             ],
           ),
         ),
