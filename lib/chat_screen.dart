@@ -63,11 +63,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           json['choices'][0]['message'] != null) {
         return json['choices'][0]['message']['content'];
       } else {
-        return '⚠️ No valid response from AI.';
+        return ' No valid response from AI.';
       }
     } else {
-      print('❌ API Error ${res.statusCode}: ${res.body}');
-      return '⚠️ Failed to get response from AI.';
+      print('API Error ${res.statusCode}: ${res.body}');
+      return 'Failed to get response from AI.';
     }
   }
 
