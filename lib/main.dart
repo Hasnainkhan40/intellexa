@@ -32,6 +32,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intellexa/onboarding.dart';
+import 'package:intellexa/splashscreen.dart';
 import 'package:intellexa/themeNotifier.dart';
 import 'package:intellexa/themedata.dart';
 import 'chat_screen.dart';
@@ -53,7 +54,7 @@ class MyApp extends ConsumerWidget {
       theme: lightMode,
       darkTheme: darkMode,
       themeMode: themeMode,
-      home: Onboarding(),
+      home: SplashScreen(),
     );
   }
 }
